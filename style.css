@@ -201,6 +201,12 @@ td,th{ border-radius: 0px; }
  #logo{margin-left:20px;}
 }
 
+/* Media CSS là một "công nghệ" được giới thiệu trong Css3. Nguyên tắc nó sử dụng trên thông qua các thông số kích thước màn hình được khai báo thông qua @media Với công cụ này chúng ta có thể phân đoạn Css chúng ta ra nhiều phần khác nhau tương ứng với kích thước của các loại thiết bị. Thuộc tính này có cú pháp như sau:
+?    @media not|only mediatype and (media feature) {
+?      CSS-Code;
+?    } 
+*/
+/*! tham khảo tại https://viblo.asia/p/gioi-thieu-ve-media-css-trong-responsive-4dbZNDEL5YM */
 #header #logo h1 {
   font-size: 34px;
   margin: 0;
