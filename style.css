@@ -1,0 +1,123 @@
+/*! CÁC THỂ LOẠI ĐỊNH DẠNG KHI LÀM WEB (đã tham khảo trên internet) */
+/** Medium Layout: 1280px */
+/** Tablet Layout: 768px */
+/** Mobile Layout: 320px */
+/** Wide Mobile Layout: 480px */
+
+/** tất cả các thuộc tính selection; placeholder đều được tham khảo trên internet trước khi đưa vào bài */
+::-moz-selection {
+  /* Code for Firefox */
+  /*TODO: Bộ chọn ::selection dùng để chọn phần văn bản đang được người dùng bôi đen. */
+  /*? đối với trình duyệt Firefox thì ta phải thêm -moz */
+  background-color: #b68834; /* nền màu #b68834 */
+  color: #fff; /* thiết lập chữ trắng */
+  /*! -->>> thiết lập chữ trắng và nền màu #b68834 khi người dùng bôi đen 1 dòng chữ bất kì */
+}
+::selection {
+  /*? tương tự như comment ở trên */
+  background-color: #b68834;
+  color: #fff;
+}
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  /*
+  *TODO: Thuộc tính placeholder là thuộc tính mới trong HTML5 dành cho thẻ <input>
+  *TODO: và <textarea>, tác dụng của placebolder là cung cấp thông tin cho người dùng 
+  *TODO: để họ biết họ sẽ nhập cái gì.
+  */
+  /*TODO: để style cho văn bản trong cái placeholder thì bên css sử dụng thuộc tính ::placeholder */
+  /* 
+  ?  đối với các trình duyệt cũ hơn thì phải dùng tới các tiền tố của nhà cung cấp 
+  ?  chẳng hạn như là -webkit, -moz,...
+  */
+  color: #777777;
+  font-weight: 300;
+}
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #777777;
+  opacity: 1;
+  font-weight: 300;
+}
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #777777;
+  opacity: 1;
+  font-weight: 300;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #777777;
+  font-weight: 300;
+}
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #777777;
+  font-weight: 300;
+}
+
+
+body {
+  color: #777777;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.625em;
+  position: relative;
+}
+ol, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+select{display:block;}
+figure{margin:0;}
+a {
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+iframe{border:0;}
+a, a:focus, a:hover {
+  text-decoration: none;
+  outline: 0;
+}
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn.focus:active, .btn:active:focus, .btn:focus {
+  text-decoration: none;
+  outline: 0;
+}
+.card-panel {
+  margin: 0;
+  padding: 60px;
+}
+/**Typography**/
+.btn i, .btn-large i, .btn-floating i, .btn-large i, .btn-flat i {
+  font-size: 1em;
+  line-height: inherit;
+}
+.gray-bg{background:#f9f9ff;}
+h1,h2,h3,
+h4,h5,h6 {
+  font-family: "Poppins", sans-serif;
+  color: #222222;
+  line-height: 1.2em !important;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-weight: 600;
+}
+.h1,.h2,.h3,
+.h4,.h5,.h6 {
+  margin-bottom: 0;
+  margin-top: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #222222;
+}
+h1,.h1{font-size:36px;}
+h2,.h2{font-size:30px;}
+h3,.h3{font-size:24px;}
+h4,.h4{font-size:18px;}
+h5,.h5{font-size:16px;}
+h6,.h6{font-size:14px;color:#222222;}
+td,th{border-radius:0px;}
