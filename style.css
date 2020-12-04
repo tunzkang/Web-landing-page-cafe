@@ -6,7 +6,7 @@
 
 /** tất cả các thuộc tính selection; placeholder đều được tham khảo trên internet trước khi đưa vào bài */
 ::-moz-selection {
-  /* Code for Firefox */
+  /*! Code for Firefox */
   /*TODO: Bộ chọn ::selection dùng để chọn phần văn bản đang được người dùng bôi đen. */
   /*? đối với trình duyệt Firefox thì ta phải thêm -moz */
   background-color: #b68834; /* nền màu #b68834 */
@@ -97,11 +97,13 @@ a, a:focus, a:hover {
   line-height: inherit;
 }
 .gray-bg{background:#f9f9ff;}
+
 h1,h2,h3,
 h4,h5,h6 {
   font-family: "Poppins", sans-serif;
   color: #222222;
-  line-height: 1.2em !important;
+  line-height: 1.2em !important; 
+  /*? Important được sử dụng để thay đổi thứ tự ưu tiên của code CSS, thuộc tính css được gán important thì nó sẽ có mức ưu tiên cao nhất, cho dù thành phần đó được định nghĩa inline hay trong file css. */
   margin-bottom: 0;
   margin-top: 0;
   font-weight: 600;
@@ -121,3 +123,39 @@ h4,.h4{ font-size:18px; }
 h5,.h5{ font-size:16px; }
 h6,.h6{ font-size:14px;color:#222222; }
 td,th{ border-radius: 0px; }
+
+/*! phần đã tham khảo internet (tham khảo tại https://evondev.com/before-va-after-trong-css/)*/
+/*
+*  before và afterafter là các pseudo-element 
+*  các pseudo-element là các phần tử giảgiả
+*  phần tử giả được tạo ra sẽ cócó display: inline
+*  thẻ img ko áp dụng được các :before ::after
+*  ::before sẽ tạo ra một phần tử giả luôn luôn là element con đầu tiên của element được sử dụng
+*  tương tự với ::after cũng thế 
+*/
+.clear::before, .clear::after {
+  content: " ";
+  display: table;
+
+  /*? ========= phần hack não, cái này copy trên internet ========= ?*/
+  /* 
+  !  content có khoảng " " là một cách để tránh lỗi Opera (Opera bug) 
+  !  khi mà thuộc tính contenteditable bao gồm ở tất cả mọi nơi trong tài liệu 
+  !  hoặc nó sẽ gây nên khoảng cách ở trên top và bottom của cái element đã xoá (clearfixed)
+  */
+  /* 
+  !  sử dụng 'table' thay vì 'block' chỉ cần thiết khi sử dụng ':before' 
+  !  để bao gồm luôn top-margin của các phần tử con 
+  */
+
+  /** ====== NGUYÊN VĂN ====== **/
+  /**
+   *! For modern browsers
+   ** 1. The space content is one way to avoid an Opera bug when the
+   **    contenteditable attribute is included anywhere else in the document.
+   **    Otherwise it causes space to appear at the top and bottom of elements
+   **    that are clearfixed.
+   ** 2. The use of `table` rather than `block` is only necessary if using
+   **    `:before` to contain the top-margins of child elements.
+  */
+}
