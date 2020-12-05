@@ -276,7 +276,7 @@ td,th{ border-radius: 0px; }
   content: "\f107";
   position: absolute;
   right: 15px;
-  font-family: FontAwesome;
+  font-family: 'Times New Roman', Times, serif;
   font-style: normal;
   font-weight: normal;
 }
